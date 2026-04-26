@@ -1,0 +1,51 @@
+# Operation 1: List all public categories
+query ListPublicCategories @auth(level: PUBLIC, insecureReason: "This operation is safe to expose to the public as it only lists public categories.") {
+  categories {
+    id
+    name
+    description
+  }
+}
+
+# Operation 2: Get tasks for the current user
+query GetMyTasks @auth(level: USER) {
+  tasks(where: {userId: {eq_expr: "auth.uid"}}) {
+    id
+    title
+    isComplete
+    dueDate
+    priority
+    category {
+      name
+    }
+  }
+}
+
+# Operation 3: Create a new task for the current user
+mutation CreateMyTask($title: String!, $isComplete: Boolean!, $priority: String!, $dueDate: Date, $description: String, $categoryId: UUID) @auth(level: USER) {
+  task_insert(data: {
+    title: $title,
+    isComplete: $isComplete,
+    priority: $priority,
+    dueDate: $dueDate,
+    description: $description,
+    userId_expr: "auth.uid",
+    categoryId: $categoryId
+  })
+}
+
+# Operation 4: Update a specific task for the current user
+mutation UpdateMyTask($taskId: UUID!, $isComplete: Boolean, $title: String, $priority: String, $dueDate: Date, $description: String, $categoryId: UUID) @auth(level: USER) {
+  task_update(
+    key: {id: $taskId},
+    where: {userId: {eq_expr: "auth.uid"}},
+    data: {
+      isComplete: $isComplete,
+      title: $title,
+      priority: $priority,
+      dueDate: $dueDate,
+      description: $description,
+      categoryId: $categoryId
+    }
+  )
+}

@@ -1,0 +1,23 @@
+type User @table {
+  displayName: String!
+  createdAt: Timestamp!
+  email: String
+}
+
+type Category @table {
+  name: String!
+  createdAt: Timestamp!
+  description: String
+  user: User
+}
+
+type Task @table {
+  title: String!
+  isComplete: Boolean!
+  priority: String!
+  createdAt: Timestamp!
+  description: String
+  dueDate: Date
+  user: User
+  category: Category
+}

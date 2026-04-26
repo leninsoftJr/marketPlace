@@ -1,0 +1,64 @@
+mutation SeedData @transaction @auth(level: PUBLIC, insecureReason: "This is seed data and does not expose sensitive information.") {
+  user_insertMany(data: [
+    {
+      id: "550e8400-e29b-41d4-a716-446655440000",
+      displayName: "Alice Smith",
+      email: "alice@example.com",
+      createdAt: "2023-01-01T10:00:00Z"
+    },
+    {
+      id: "550e8400-e29b-41d4-a716-446655440001",
+      displayName: "Bob Johnson",
+      email: "bob@example.com",
+      createdAt: "2023-01-01T10:05:00Z"
+    }
+  ])
+  category_insertMany(data: [
+    {
+      id: "650e8400-e29b-41d4-a716-446655440002",
+      name: "Work",
+      description: "Tasks related to professional activities",
+      createdAt: "2023-01-01T10:10:00Z",
+      userId: "550e8400-e29b-41d4-a716-446655440000"
+    },
+    {
+      id: "650e8400-e29b-41d4-a716-446655440003",
+      name: "Personal",
+      description: "Tasks related to personal life",
+      createdAt: "2023-01-01T10:15:00Z",
+      userId: "550e8400-e29b-41d4-a716-446655440001"
+    }
+  ])
+  task_insertMany(data: [
+    {
+      id: "750e8400-e29b-41d4-a716-446655440004",
+      title: "Complete project report",
+      isComplete: false,
+      priority: "High",
+      createdAt: "2023-01-01T10:20:00Z",
+      dueDate: "2023-01-05",
+      userId: "550e8400-e29b-41d4-a716-446655440000",
+      categoryId: "650e8400-e29b-41d4-a716-446655440002"
+    },
+    {
+      id: "750e8400-e29b-41d4-a716-446655440005",
+      title: "Buy groceries",
+      isComplete: false,
+      priority: "Medium",
+      createdAt: "2023-01-01T10:25:00Z",
+      dueDate: "2023-01-03",
+      userId: "550e8400-e29b-41d4-a716-446655440001",
+      categoryId: "650e8400-e29b-41d4-a716-446655440003"
+    },
+    {
+      id: "750e8400-e29b-41d4-a716-446655440006",
+      title: "Schedule dentist appointment",
+      isComplete: true,
+      priority: "Low",
+      createdAt: "2023-01-01T10:30:00Z",
+      dueDate: "2023-01-10",
+      userId: "550e8400-e29b-41d4-a716-446655440001",
+      categoryId: "650e8400-e29b-41d4-a716-446655440003"
+    }
+  ])
+}
