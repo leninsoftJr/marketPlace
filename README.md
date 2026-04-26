@@ -1,35 +1,27 @@
 # Qhatu | Marketplace Escolar 🚀
 
-**Qhatu** es una plataforma web tipo marketplace diseñada específicamente para la comunidad estudiantil de **Eight Academy**. Este proyecto forma parte de una monografía de grado centrada en el fomento del emprendimiento joven mediante herramientas tecnológicas modernas.
+**Qhatu** (anteriormente EmprendeJoven) es una plataforma web desarrollada como parte de un proyecto de monografía en **Eight Academy**. Su objetivo es facilitar el intercambio comercial y el emprendimiento entre estudiantes mediante una interfaz moderna y segura.
 
-## ✨ Características Principales
+## ✨ Novedades de la Versión 1.3.0
 
-- **Doble Rol de Usuario:** Los usuarios pueden navegar como compradores o autenticarse como emprendedores.
-- **Autenticación Segura:** Integración con Google Auth vía Firebase.
-- **Gestión de Productos (CRUD):** Los emprendedores pueden publicar, editar y eliminar sus productos en tiempo real.
-- **Filtros Inteligentes:** Búsqueda por nombre y filtrado por categorías (Comida, Artesanías, Servicios).
-- **Conexión Directa:** Botón de pedido vinculado directamente al WhatsApp del vendedor.
+- **Sistema CRUD Completo:** Ahora los emprendedores pueden añadir, editar y eliminar sus productos de manera integral.
+- **Validación de Precios:** Soporte nativo para decimales, asegurando transacciones precisas.
+- **Interfaz Adaptable:** Mejora visual en el panel de administración con un sistema de rejilla optimizado.
+- **Unificación Técnica:** Código de Firebase optimizado para evitar errores de carga de módulos.
 
-## 🛠️ Tecnologías Utilizadas
+## 🛠️ Stack Tecnológico
 
-- **Frontend:** HTML5, JavaScript (ES6+).
-- **Estilos:** [Tailwind CSS](https://tailwindcss.com/) (vía CDN para desarrollo ágil).
-- **Backend/Base de Datos:** [Google Firebase](https://firebase.google.com/) (Cloud Firestore).
-- **Hosting:** Firebase Hosting.
+- **Frontend:** HTML5 y JavaScript (ES6+).
+- **Diseño:** [Tailwind CSS](https://tailwindcss.com/).
+- **Backend:** Google Firebase (Cloud Firestore y Authentication).
 
-## 📁 Estructura del Proyecto
+## 📂 Archivos del Proyecto
 
-- `index.html`: Aplicación principal (Single Page Application).
-- `doc.html`: Documentación técnica y registro de cambios del proyecto.
-- `README.md`: Este archivo informativo.
-
-## 🚀 Instalación y Uso Local
-
-1. Clona el repositorio o descarga los archivos.
-2. Abre `index.html` en cualquier navegador moderno.
-3. Para funcionalidades de administrador (Publicar/Editar), asegúrate de tener una conexión activa a internet para la vinculación con Firebase.
+- `index.html`: La aplicación principal.
+- `doc.html`: Documentación técnica detallada y registro de cambios.
+- `README.md`: Resumen e instrucciones del proyecto.
 
 ---
-**Autor:** Lenin Barrera  
+**Desarrollado por:** Lenin Barrera  
 **Institución:** Eight Academy  
 **Año:** 2026

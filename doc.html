@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentaci車n T谷cnica | Qhatu Marketplace</title>
+    <title>Documentacion Tecnica | Qhatu</title>
     <style>
         :root {
             --navy-blue: #000080;
@@ -75,30 +75,8 @@
             font-size: 0.8rem;
         }
 
-        .step {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .step-number {
-            background: var(--navy-blue);
-            color: white;
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-right: 10px;
-            font-weight: bold;
-        }
-
-        code {
-            background: #eee;
-            padding: 2px 5px;
-            border-radius: 3px;
-        }
+        ul { padding-left: 1.5rem; }
+        li { margin-bottom: 0.5rem; }
 
         footer {
             text-align: center;
@@ -111,14 +89,14 @@
 <body>
 
 <header>
-    <h1>Documentaci車n de Proyecto: Qhatu</h1>
+    <h1>Documentacion de Proyecto: Qhatu</h1>
     <p>Marketplace Escolar para Eight Academy</p>
 </header>
 
 <div class="container">
 
     <div class="card">
-        <h2>?? Especificaciones T谷cnicas (PHPDOC)</h2>
+        <h2>?? Especificaciones Tecnicas (PHPDOC)</h2>
         <div class="phpdoc">
             <span>/**</span><br>
             <span> * <b>@project</b>     Qhatu (Marketplace Escolar)</span><br>
@@ -137,51 +115,37 @@
         <div>
             <span class="version-tag">v1.3.0</span> <strong>Actual - CRUD Completo y Estabilidad</strong>
             <ul>
-                <li>Unificaci車n de m車dulos de Firebase para evitar conflictos de sintaxis.</li>
-                <li>Implementaci車n de edici車n completa (nombre, descripci車n, categor赤a, curso, precio, contacto e imagen).</li>
-                <li>Mejora en la validaci車n de tipos de datos (precios con decimales mediante <code>parseFloat</code>).</li>
-                <li>Optimizaci車n de la interfaz del panel de control con rejilla adaptable (Grid).</li>
+                <li>Unificacion de modulos de Firebase para evitar conflictos de sintaxis.</li>
+                <li>Implementacion de edicion completa (nombre, descripcion, categoria, curso, precio, contacto e imagen).</li>
+                <li>Mejora en la validacion de tipos de datos (precios con decimales mediante <code>parseFloat</code>).</li>
+                <li>Optimizacion de la interfaz del panel de control con rejilla adaptable (Grid).</li>
             </ul>
         </div>
-        <hr>
+        <hr style="margin: 1.5rem 0; border: 0; border-top: 1px solid #eee;">
         <div>
             <span class="version-tag">v1.2.0</span> <strong>Persistencia de Datos</strong>
             <ul>
-                <li>Habilitaci車n de Cloud Firestore en modo de prueba.</li>
-                <li>Configuraci車n de Reglas de Seguridad NoSQL.</li>
-                <li>Resoluci車n de conflictos de dominio autorizado.</li>
+                <li>Habilitacion de Cloud Firestore en modo de prueba.</li>
+                <li>Configuracion de Reglas de Seguridad NoSQL.</li>
+                <li>Resolucion de conflictos de dominio autorizado.</li>
             </ul>
         </div>
     </div>
 
     <div class="card">
-        <h2>?? Gu赤a de Despliegue R芍pido</h2>
-        <div class="step"><div class="step-number">1</div> <code>firebase login</code></div>
-        <div class="step"><div class="step-number">2</div> <code>firebase init hosting</code></div>
-        <div class="step"><div class="step-number">3</div> <code>firebase deploy</code></div>
-        <p><small>Importante: Durante el despliegue, definir el directorio p迆blico como ra赤z si se usa un archivo 迆nico.</small></p>
-    </div>
-
-    <div class="card">
-        <h2>?? Configuraci車n de Seguridad</h2>
-        <p>Reglas de Firestore recomendadas para el desarrollo actual:</p>
-        <pre style="background: #f8f9fa; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
-rules_version = '2';
-service cloud.firestore {
-  match /databases/{database}/documents {
-    match /products/{product} {
-      allow read: if true;
-      allow write: if request.auth != null;
-    }
-  }
-}
-        </pre>
+        <h2>?? Guia de Despliegue Rapido</h2>
+        <p>Pasos ejecutados mediante Firebase CLI:</p>
+        <ol>
+            <li><code>firebase login</code></li>
+            <li><code>firebase init hosting</code></li>
+            <li><code>firebase deploy</code></li>
+        </ol>
     </div>
 
 </div>
 
 <footer>
-    ? 2026 Eight Academy - Monograf赤a de Grado. <br>
+    c 2026 Eight Academy - Monografia de Grado. <br>
     Desarrollado con Firebase Hosting & Cloud Firestore.
 </footer>
 
